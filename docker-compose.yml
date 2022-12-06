@@ -71,8 +71,6 @@ services:
     volumes:
       - "db_data:/var/lib/postgresql/data"
     restart: "unless-stopped"
-volumes:
-  db_data:
 
   # ----------------------------------
   # Celery beat must only be used in > 1.2.0 installs. If setting to a previous install, remove this worker
@@ -93,3 +91,7 @@ volumes:
       - "local.env"
     tty: true
     restart: "true"
+    
+volumes:
+  db_data:
+
