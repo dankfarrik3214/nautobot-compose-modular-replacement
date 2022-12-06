@@ -90,8 +90,8 @@ services:
     env_file:
       - "local.env"
     tty: true
-    restart: "true"
-    
+    restart: "unless-stopped"
+
 volumes:
   db_data:
 
